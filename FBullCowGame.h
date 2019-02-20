@@ -11,4 +11,4 @@ private:
   int myTries;
   int maxTries;
   int HighScore;
-}
+};
