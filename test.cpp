@@ -19,7 +19,7 @@ int main(){
   }
 
 void PlayGame(){
-
+  BCGame.SetCurrentTry(1);
   int maxTries = BCGame.GetMaxTries();
    for (int i = 0; i< maxTries; ++i){
     PrintBack(GetGuess());
