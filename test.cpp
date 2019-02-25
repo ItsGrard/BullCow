@@ -2,15 +2,15 @@
 #include <string>
 #include "FBullCowGame.h"
 
-void PrintIntro();
+void PrintIntro(); //Print brief introduction
 void PlayGame();
-std::string GetGuess();
-void PrintBack(std::string guess);
-bool AskToPlayAgain();
+std::string GetGuess(); // Asks for input and returns what the user has input
+void PrintBack(std::string guess); // Gets a string input and returns it (should be getGues())
+bool AskToPlayAgain(); // Asks to play again, returns true if yes
 FBullCowGame BCGame; //Instantiate
 int main(){
   do {
-
+  BCGame.ResetGame();
   PrintIntro();
   PlayGame();
 }
@@ -19,11 +19,13 @@ int main(){
   }
 
 void PlayGame(){
-  BCGame.SetCurrentTry(1);
   int maxTries = BCGame.GetMaxTries();
+  // TODO change for to while when validating
    for (int i = 0; i< maxTries; ++i){
-    PrintBack(GetGuess());
+    PrintBack(GetGuess()); // TODO Check it
     std::cout << std::endl;
+    // Return the valid GetGuess
+    // Print number of bulls and cows
     BCGame.SetCurrentTry(BCGame.GetCurrentTry()+1);
   }
     return;
