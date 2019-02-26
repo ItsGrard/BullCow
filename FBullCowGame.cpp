@@ -2,6 +2,10 @@
 #include <string>
 using int32 = int;
 using string = std::string;
+
+const string Hidden_Word = "planet";
+MyHiddenWord = Hidden_Word;
+
 FBullCowGame::FBullCowGame(){ //Constructor, resets game every time it's called
   ResetGame();
 }
@@ -24,9 +28,9 @@ int32 FBullCowGame::GetCurrentTry() const{
 }
 
 BullCowCount FBullCowGame::SubmitGuess(strin s){
-
     myTries++;
-
+    BullCowCount BullCowCount
+    return BullCowCount;
 }
 
 bool FBullCowGame::checkGuessValidity(std::string guess){ // TODO Checks if the guess is valid
