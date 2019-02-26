@@ -1,11 +1,11 @@
 #include "FBullCowGame.h"
 #include <string>
-
-
+using int32 = int;
+using string = std::string;
 FBullCowGame::FBullCowGame(){ //Constructor, resets game every time it's called
   ResetGame();
 }
-int FBullCowGame::SetCurrentTry(int settry){
+int32 FBullCowGame::SetCurrentTry(int32 settry){
 return myTries = settry;
 }
 
@@ -13,14 +13,20 @@ void FBullCowGame::ResetGame(){ // Resets game values
   myTries = 1;
   maxTries = 5;
 }
-int FBullCowGame::GetMaxTries() const{ //Returns the max number of possbile tries
+int32 FBullCowGame::GetMaxTries() const{ //Returns the max number of possbile tries
   return maxTries;
 }
-int FBullCowGame::GetHighScore() const{
+int32 FBullCowGame::GetHighScore() const{
   return 0;
 }
-int FBullCowGame::GetCurrentTry() const{
+int32 FBullCowGame::GetCurrentTry() const{
   return myTries;
+}
+
+BullCowCount FBullCowGame::SubmitGuess(strin s){
+
+    myTries++;
+
 }
 
 bool FBullCowGame::checkGuessValidity(std::string guess){ // TODO Checks if the guess is valid

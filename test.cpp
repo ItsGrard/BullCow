@@ -2,6 +2,8 @@
 #include <string>
 #include "FBullCowGame.h"
 
+using int32 = int;
+using string = std::string;
 void PrintIntro(); //Print brief introduction
 void PlayGame();
 std::string GetGuess(); // Asks for input and returns what the user has input
@@ -19,9 +21,9 @@ int main(){
   }
 
 void PlayGame(){
-  int maxTries = BCGame.GetMaxTries();
+  int32 maxTries = BCGame.GetMaxTries();
   // TODO change for to while when validating
-   for (int i = 0; i< maxTries; ++i){
+   for (int32 i = 0; i< maxTries; ++i){
     PrintBack(GetGuess()); // TODO Check it
     std::cout << std::endl;
     // Return the valid GetGuess
@@ -33,7 +35,7 @@ void PlayGame(){
 
 //Introduce the game
 void PrintIntro(){
-   constexpr int WORLD_LENGHT = 9;
+   constexpr int32 WORLD_LENGHT = 9;
  std::cout << std::endl << "----------------------" << std::endl <<"Welcome to Bull and Cows, a fun word game. " << std::endl;
  std::cout << "Can you guess the " << WORLD_LENGHT << " letter isogram I'm thinking of?" << std::endl;
  return;
