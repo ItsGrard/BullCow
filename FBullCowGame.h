@@ -10,7 +10,7 @@ struct BullCowCount {
 class FBullCowGame {
 
 public:
-  BollCowCount SubmitGuess(string s);
+  BullCowCount SubmitGuess(string s);
   FBullCowGame();
   int32 SetCurrentTry(int32 settry);
   int32 GetMaxTries() const;

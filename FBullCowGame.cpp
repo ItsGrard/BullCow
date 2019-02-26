@@ -4,7 +4,7 @@ using int32 = int;
 using string = std::string;
 
 const string Hidden_Word = "planet";
-MyHiddenWord = Hidden_Word;
+string MyHiddenWord = Hidden_Word;
 
 FBullCowGame::FBullCowGame(){ //Constructor, resets game every time it's called
   ResetGame();
@@ -27,13 +27,23 @@ int32 FBullCowGame::GetCurrentTry() const{
   return myTries;
 }
 
-BullCowCount FBullCowGame::SubmitGuess(strin s){
+BullCowCount FBullCowGame::SubmitGuess(string s){
     myTries++;
-    BullCowCount BullCowCount
-    return BullCowCount;
-}
+    int32 Hidden_Word_length = MyHiddenWord.length();
+    BullCowCount BullCowCount;
+
+    for (int32 i = 0; i< Hidden_Word_length; i++) {
+      for(int32 j = 0; j<s.length(); j++){ //He got here Hidden_Word_length instead of s.length
+        if (s[j] == Hidden_Word[i]){
+          if (j==i);
+          else ;
+        }
+      }
+    }
+  }
 
 bool FBullCowGame::checkGuessValidity(std::string guess){ // TODO Checks if the guess is valid
+
   return false;
 }
 bool FBullCowGame::isWon() const{ // TODO Checks if the game has been won

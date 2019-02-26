@@ -25,12 +25,13 @@ void PlayGame(){
   // TODO change for to while when validating
    for (int32 i = 0; i< maxTries; ++i){
     PrintBack(GetGuess()); // TODO Check it
-    std::cout << std::endl;
+    BullCowCount BullCowCount = BCGame.SubmitGuess(GetGuess());
+    std::cout << std::endl << "Bulls = " << BullCowCount.Bulls <<". Cows = " << BullCowCount.Cows << std::endl;
     // Return the valid GetGuess
     // Print number of bulls and cows
     BCGame.SetCurrentTry(BCGame.GetCurrentTry()+1);
   }
-    return;
+
 }
 
 //Introduce the game
