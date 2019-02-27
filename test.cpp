@@ -24,12 +24,12 @@ void PlayGame(){
   int32 maxTries = BCGame.GetMaxTries();
   // TODO change for to while when validating
    for (int32 i = 0; i< maxTries; ++i){
-    PrintBack(GetGuess()); // TODO Check it
-    BullCowCount BullCowCount = BCGame.SubmitGuess(GetGuess());
+  string guess =  GetGuess(); // TODO Check it
+    BullCowCount BullCowCount = BCGame.SubmitGuess(guess);
     std::cout << std::endl << "Bulls = " << BullCowCount.Bulls <<". Cows = " << BullCowCount.Cows << std::endl;
     // Return the valid GetGuess
     // Print number of bulls and cows
-    BCGame.SetCurrentTry(BCGame.GetCurrentTry()+1);
+    BCGame.SetCurrentTry(BCGame.GetCurrentTry()); //I dont get wht the current try increments but ok
   }
 
 }
