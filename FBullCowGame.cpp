@@ -1,4 +1,5 @@
 #include "FBullCowGame.h"
+#include <iostream>
 #include <string>
 using int32 = int;
 using string = std::string;
@@ -28,18 +29,23 @@ int32 FBullCowGame::GetCurrentTry() const{
 }
 
 BullCowCount FBullCowGame::SubmitGuess(string s){
-    myTries++;
-    int32 Hidden_Word_length = MyHiddenWord.length();
-    BullCowCount BullCowCount;
 
+    int32 Hidden_Word_length = MyHiddenWord.length();
+    BullCowCount BullCowCountS;
+  if (Hidden_Word_length == s.length()){
+    myTries++;
     for (int32 i = 0; i< Hidden_Word_length; i++) {
       for(int32 j = 0; j<s.length(); j++){ //He got here Hidden_Word_length instead of s.length
         if (s[j] == Hidden_Word[i]){
-          if (j==i);
-          else ;
+          if (j==i) BullCowCountS.Bulls++;
+          else BullCowCountS.Cows++;
         }
       }
     }
+  }
+  else {std::cout << std::endl << "Incorrect length, try again." << std::endl;
+      }
+    return BullCowCountS;
   }
 
 bool FBullCowGame::checkGuessValidity(std::string guess){ // TODO Checks if the guess is valid

@@ -2,6 +2,7 @@
 #include <string>
 #include "FBullCowGame.h"
 
+
 using int32 = int;
 using string = std::string;
 void PrintIntro(); //Print brief introduction
@@ -24,6 +25,7 @@ void PlayGame(){
   int32 maxTries = BCGame.GetMaxTries();
   // TODO change for to while when validating
    for (int32 i = 0; i< maxTries; ++i){
+     i = BCGame.GetCurrentTry();
   string guess =  GetGuess(); // TODO Check it
     BullCowCount BullCowCount = BCGame.SubmitGuess(guess);
     std::cout << std::endl << "Bulls = " << BullCowCount.Bulls <<". Cows = " << BullCowCount.Cows << std::endl;

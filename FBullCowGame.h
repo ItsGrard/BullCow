@@ -2,10 +2,12 @@
 #include <string>
 using int32 = int;
 using string = std::string;
+
 struct BullCowCount {
   int32 Bulls = 0;
   int32 Cows = 0;
 };
+
 
 class FBullCowGame {
 
@@ -25,5 +27,5 @@ private:
   int32 myTries;
   int32 maxTries;
   int32 HighScore = 0;
-  string MyHiddenWord;
+  string MyHiddenWord = "planet";
 };
