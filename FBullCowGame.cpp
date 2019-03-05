@@ -35,9 +35,9 @@ BullCowCount FBullCowGame::SubmitGuess(string s){
   if (Hidden_Word_length == s.length()){
     myTries++;
     for (int32 i = 0; i< Hidden_Word_length; i++) {
-      for(int32 j = 0; j<s.length(); j++){ //He got here Hidden_Word_length instead of s.length
+      for(int32 j = 0; j<Hidden_Word_length; j++){ //He got here Hidden_Word_length instead of s.length
         if (s[j] == Hidden_Word[i]){
-          if (j==i) BullCowCountS.Bulls++;
+          if (j==i) BullCowCountS.Bulls++; 
           else BullCowCountS.Cows++;
         }
       }
