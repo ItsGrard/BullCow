@@ -18,6 +18,14 @@ void FBullCowGame::ResetGame(){ // Resets game values
   myTries = 1;
   maxTries = 5;
 }
+
+string FBullCowGame::getHiddenWord(){
+  return MyHiddenWord;
+}
+int FBullCowGame::getHiddenWordLength(string s){
+  return s.length();
+}
+
 int32 FBullCowGame::GetMaxTries() const{ //Returns the max number of possbile tries
   return maxTries;
 }
@@ -54,12 +62,4 @@ bool FBullCowGame::checkGuessValidity(std::string guess){ // TODO Checks if the 
 }
 bool FBullCowGame::isWon() const{ // TODO Checks if the game has been won
   return false;
-}
-
-
-string FBullCowGame::getHiddenWord(){
-  return MyHiddenWord;
-}
-int FBullCowGame::getHiddenWordLength(string s){
-  return s.length();
 }
