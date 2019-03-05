@@ -37,7 +37,7 @@ BullCowCount FBullCowGame::SubmitGuess(string s){
     for (int32 i = 0; i< Hidden_Word_length; i++) {
       for(int32 j = 0; j<Hidden_Word_length; j++){ //He got here Hidden_Word_length instead of s.length
         if (s[j] == Hidden_Word[i]){
-          if (j==i) BullCowCountS.Bulls++; 
+          if (j==i) BullCowCountS.Bulls++;
           else BullCowCountS.Cows++;
         }
       }
@@ -54,4 +54,12 @@ bool FBullCowGame::checkGuessValidity(std::string guess){ // TODO Checks if the 
 }
 bool FBullCowGame::isWon() const{ // TODO Checks if the game has been won
   return false;
+}
+
+
+string FBullCowGame::getHiddenWord(){
+  return MyHiddenWord;
+}
+int FBullCowGame::getHiddenWordLength(string s){
+  return s.length();
 }

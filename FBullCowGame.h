@@ -21,6 +21,8 @@ public:
   bool isWon() const;
   bool checkGuessValidity(std::string guess);
   void ResetGame();
+  string getHiddenWord();
+  int getHiddenWordLength(string s);
 
 private:
   //Initialitation in constructor

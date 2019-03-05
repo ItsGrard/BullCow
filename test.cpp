@@ -38,7 +38,7 @@ void PlayGame(){
 
 //Introduce the game
 void PrintIntro(){
-   constexpr int32 WORLD_LENGHT = 9;
+   int32 WORLD_LENGHT = BCGame.getHiddenWordLength(BCGame.getHiddenWord());
  std::cout << std::endl << "----------------------" << std::endl <<"Welcome to Bull and Cows, a fun word game. " << std::endl;
  std::cout << "Can you guess the " << WORLD_LENGHT << " letter isogram I'm thinking of?" << std::endl;
  return;
